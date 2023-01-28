@@ -27,8 +27,22 @@
 
 #### ◾ **initial source file upload** 
 - ###### `/board/list`
+database<br>
+- CRUD 작업을 테스트하기 전에 tbl_reply 테이블이 tbl_board 테이블과 FK(외래키)의 관계로 처리되어 있다는 점을 알아두기<br>
+<img src="img/database_relationship_diagram.jpg" width="274" height="427"><br>
+- tbl_reply가 tbl_board 테이블의 bno 값과 정확히 일치해야 하므로 테스트 진행 전 최신 bno 번호 몇 개를 예제로 확인
+<img src="img/database_select.jpg" width="450" height="100">
+```
+SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno desc
+```
 
 ---
+
+#### ◾ **testMapper** 
+- src/test/java
+    - org.zerock.mapper
+        - ReplyMapperTests : testMapper()를 통해서 ReplyMapper 타입의 객체가 정상적으로 사용이 가능한지 확인<br>
+<img src="img/JUnit_testMapper.jpg" width="200" height="100">
 
 
 
