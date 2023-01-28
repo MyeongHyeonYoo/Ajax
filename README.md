@@ -36,8 +36,6 @@ database<br>
 SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno DESC;
 ```
 
----
-
 #### ◾ **testMapper** 
 - src/test/java
     - org.zerock.mapper
@@ -56,5 +54,10 @@ SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno DESC;
 ```
 SELECT * FROM tbl_reply ORDER BY rno DESC;
 ```
+
+#### ◾ **조회(read)** 
+- TEST(5번 댓글 조회)<br>
+<img src="img/console_testRead.jpg" width="500" height="120">
+<img src="img/JUnit_testRead.jpg" width="200" height="100">
 
 ---

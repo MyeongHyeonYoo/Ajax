@@ -25,6 +25,13 @@ public class ReplyMapperTests {
 	private ReplyMapper mapper;
 	
 	@Test
+	public void testRead() {
+		Long targetRno = 5L;
+		ReplyVO vo = mapper.read(targetRno);
+		log.info(vo);
+	}
+	
+	@Test
 	public void testCreate() {
 		IntStream.rangeClosed(1, 10).forEach(i -> {
 			ReplyVO vo = new ReplyVO();
