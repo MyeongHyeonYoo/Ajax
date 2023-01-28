@@ -72,4 +72,10 @@ SELECT * FROM tbl_reply ORDER BY rno DESC;
 <img src="img/console_testUpdate.jpg" width="500" height="120">
 <img src="img/JUnit_testUpdate.jpg" width="200" height="100">
 
+#### ◾ **@Param어노테이션과 댓글 목록** 
+- TEST(특정 게시물의 댓글 불러오기)<br>
+<img src="img/console_@Param_check.jpg" width="500" height="120">
+<img src="img/console_@Param_check2.jpg" width="500" height="120">
+<img src="img/JUnit_testList.jpg" width="200" height="100">
+
 ---
