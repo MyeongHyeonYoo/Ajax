@@ -33,7 +33,7 @@ database<br>
 - tbl_reply가 tbl_board 테이블의 bno 값과 정확히 일치해야 하므로 테스트 진행 전 최신 bno 번호 몇 개를 예제로 확인
 <img src="img/database_select.jpg" width="450" height="100">
 ```
-SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno desc
+SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno DESC;
 ```
 
 ---
@@ -44,9 +44,17 @@ SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno desc
         - ReplyMapperTests : testMapper()를 통해서 ReplyMapper 타입의 객체가 정상적으로 사용이 가능한지 확인<br>
 <img src="img/JUnit_testMapper.jpg" width="200" height="100">
 
+---
 
+#### CRUD 작업
+#### ◾ **등록(create)** 
+- TEST(게시물 번호의 일부로 실제 데이터베이스에 있는 번호 확인(PK - FK))<br>
+<img src="img/JUnit_testCreate.jpg" width="200" height="100">
+- tbl_reply의 상태 확인<br>
+<img src="img/database_select_check.jpg" width="400" height="200">
 
 ```
-
+SELECT * FROM tbl_reply ORDER BY rno DESC;
 ```
 
+---
