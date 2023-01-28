@@ -65,4 +65,11 @@ SELECT * FROM tbl_reply ORDER BY rno DESC;
 <img src="img/database_delete_check.jpg" width="400" height="190">
 <img src="img/JUnit_testDelete.jpg" width="200" height="100">
 
+#### ◾ **수정(update)** 
+- TEST(10번 수정)<br>
+
+<img src="img/database_update_check.jpg" width="400" height="190">
+<img src="img/console_testUpdate.jpg" width="500" height="120">
+<img src="img/JUnit_testUpdate.jpg" width="200" height="100">
+
 ---
