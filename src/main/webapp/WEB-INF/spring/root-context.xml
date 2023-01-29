@@ -14,6 +14,7 @@
 
 		<property name ="username" value="spring_class"></property>   
 		<property name ="password" value="12345"></property>
+		
 	</bean>
 	
 	<!-- HikariCP configuration -->

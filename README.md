@@ -76,6 +76,35 @@ SELECT * FROM tbl_reply ORDER BY rno DESC;
 - TEST(특정 게시물의 댓글 불러오기)<br>
 <img src="img/console_@Param_check.jpg" width="500" height="120">
 <img src="img/console_@Param_check2.jpg" width="500" height="120">
-<img src="img/JUnit_testList.jpg" width="200" height="100">
+<img src="img/JUnit_testList.jpg" width="200" height="100"><br>
+▶ XML에서 #{bno}가 @Param("bno")와 매칭되어 사용
 
+#### ◾ **서비스 영역과 Controller 처리** 
+스프링 version - 4.3 
+```
+@Service
+@Log4j
+@AllArgsConstructor
+public class ReplyServiceImpl implements ReplyService {
+    private ReplyMapper mapper;
+}
+...
+```
+스프링 version - 4.2 이하
+```
+@Service
+@Log4j
+public class ReplyServiceImpl implements ReplyService {
+	@Autowired
+	private ReplyMapper mapper;
+```
+- TEST(등록작업 테스트 : Postman - `POST` TEST)<br>
+<img src="img/Postman_replies_new_post_test.jpg" width="600" height="450"><br>
+예외발생
+```
+ERROR: org.zerock.exception.CommonExceptionAdvice - Exception .......Content type 'application/json;charset=UTF-8' not supported
+ERROR: org.zerock.exception.CommonExceptionAdvice - {exception=org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/json;charset=UTF-8' not supported}
+```
+>###### 분명 Content type은 UTF-8로 되어있는 것이 확인이 되고 200으로 POST 방식으로 전송이 성공했는데, 왜 예외발생이 되는지 모르겠다... pass
+>###### 데이터베이스에도 물론 등록 실패...
 ---

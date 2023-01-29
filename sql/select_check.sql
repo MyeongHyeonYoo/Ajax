@@ -1,0 +1,5 @@
+SELECT * FROM tbl_board WHERE rownum < 10 ORDER BY bno DESC;
+SELECT * FROM tbl_reply ORDER BY rno DESC;
+
+
+ALTER SEQUENCE seq_reply INCREMENT BY 1;
